@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="container">
+            <section class="vh-100 bg-image">
+                <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                  <div class="container h-100">
+                    <div class="row d-flex justify-content-center h-100">
+                      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                          <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Pelicula Nueva</h2>
+
+                                <form>
+
+                                    <div class="form-outline mb-4">
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" [(ngModel)]="nombre" name="nombre"/>
+                                    <label class="form-label" for="form3Example1cg">Nombre</label>
+                                    </div>
+                                    
+                                    
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                          <div class="col-md-3">
+                                            <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group1">
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" [(ngModel)]="tipo" value = "Terror" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio1">Terror</label>
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" [(ngModel)]="tipo" value = "Comedia" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio2">Comedia</label>
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off" [(ngModel)]="tipo" value = "Amor" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio3">Romance</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-3">
+                                            <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group2">
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off" [(ngModel)]="tipo" value = "Sci-fi" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio4">Sci-fi</label>
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio5" autocomplete="off" [(ngModel)]="tipo" value = "Suspenso" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio5">Suspenso</label>
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio6" autocomplete="off" [(ngModel)]="tipo" value = "Drama" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio6">Drama</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-3">
+                                            <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group3">
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio7" autocomplete="off" [(ngModel)]="tipo" value = "Acción" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio7">Acción</label>
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio8" autocomplete="off" [(ngModel)]="tipo" value = "Musical" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio8">Musical</label>
+                                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio9" autocomplete="off" [(ngModel)]="tipo" value = "Policial" (click)="Print()">
+                                                <label class="btn btn-outline-secondary" for="vbtn-radio9">Policial</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <div class="form-outline mb-4 fecha">
+                                        <input class = "fecha" type="date" id="datepicker" [(ngModel)]="fechaEstreno" name="datepicker" (click)="Print()">
+                                        <label for="datepicker">Fecha de Estreno</label>
+                                    </div>
+                                    
+                                    <div class="form-outline mb-4">
+                                        <input type="number" id="form3Example3cg" class="form-control form-control-lg" [(ngModel)]="cantidadPublico" name="publico" (input)="onInputChange($event)"/>
+                                        <label class="form-label" for="form3Example3cg">Cantidad de Publico</label>
+                                    </div>
+
+                                    <label class="form-label">Poster</label>
+                                    <div class="poster">
+                                        <img [src]="this.carteleraFoto" alt="" width="200"/>
+                                    </div>
+
+                                    <div class="input-group mb-4">
+                                        <input type="file" class="form-control btn-outline-secondary" id="imagen" accept="image/*"(change)="handleFileInput($event)">
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-left">
+                                        <button type="button" class="btn btn-custom" (click) = "agregarPelicula()"> Agregar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

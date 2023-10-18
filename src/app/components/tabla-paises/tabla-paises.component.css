@@ -1,0 +1,26 @@
+.flag-card {
+  margin: 10px;
+  width: calc(33.33% - 20px); /* Para 3 países por fila */
+  float: left;
+  height: 130px; /* Altura predeterminada para las cartas */
+}
+
+.card {
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  background-color: #8591d8;
+  align-items: center;
+
+}
+
+.flag-image {
+  width: 100px;
+  height: 75px;
+}
+
+.card-text {
+  flex: 1; /* Hace que el texto ocupe todo el espacio disponible en la carta */
+  overflow: hidden; /* Oculta cualquier texto que sobresalga de la carta */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más texto oculto */
+}

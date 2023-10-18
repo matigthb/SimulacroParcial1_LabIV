@@ -1,0 +1,13 @@
+.event-schedule-area-two .tab-content .table tbody tr th .event-date {
+    color: #252525;
+    text-align: center;
+}
+.event-schedule-area-two .tab-content .table tbody tr th .event-date span {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+.container .table {
+    background-color: #1b0808; /* Cambia el color de fondo de la tabla */
+}

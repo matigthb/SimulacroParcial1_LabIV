@@ -1,0 +1,20 @@
+
+
+<!-- Bootstrap Jumbotron -->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Peliculas:</h1>
+        <app-tabla-pelicula [peliculas]="peliculas"> </app-tabla-pelicula>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7">
+        <app-peliculas-alta></app-peliculas-alta>
+      </div>
+      <div class="col-md-5">
+        <app-detalle-pelicula *ngIf="mostrarDetalle"></app-detalle-pelicula>
+      </div>
+    </div>
+  </div>
+

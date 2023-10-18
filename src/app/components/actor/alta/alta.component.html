@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="border-radius: 15px;">
+                            <h2 class="text-uppercase text-center mb-5 titulo">Actor Nuevo</h2>
+                            <form>
+                                <div class="form-outline mb-4">
+                                    <input class="boton" type="text" id="form3Example1cg" class="form-control form-control-lg" [(ngModel)]="nombre" name="nombre"/>
+                                    <label class="form-label" for="form3Example1cg">Nombre</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input class="boton" type="text" id="form3Example1cg" class="form-control form-control-lg" [(ngModel)]="apellido" name="apellido"/>
+                                    <label class="form-label" for="form3Example1cg">Apellido</label>
+                                </div>
+                                
+                                <div class="form-outline mb-4">
+                                    <input class="boton" type="text" id="form3Example1cg" class="form-control form-control-lg" [(ngModel)]="pais" name="pais"/>
+                                    <label class="form-label" for="form3Example1cg">Pais</label>
+                                </div>
+
+                                <div class="d-flex justify-content-left">
+                                    <button type="button" class="btn btn-custom" (click) = "agregarActor()"> Agregar
+                                    </button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card scrollable-card" style="border-radius: 15px;">
+                        <h2 class="text-uppercase text-center mb-5">Paises</h2>
+                        <div class = "paises">
+                            <app-tabla-paises (paisClickeado)="paisSeleccionado($event)"></app-tabla-paises>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </body>
+</html>

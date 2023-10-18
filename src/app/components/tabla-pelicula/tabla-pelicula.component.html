@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th><span>Nombre</span></th>
+							<th><span>Fecha de Estreno</span></th>
+                            <th><span>Foto</span></th>
+						</tr>
+					</thead>
+                    <tbody>
+                        <tr *ngFor="let pelicula of peliculas" (click)="filaClickeada(pelicula)">
+                            <td>{{pelicula.nombre}}</td>
+                            <th>
+                                <div class="event-date">
+                                    <span>{{pelicula.fechaEstreno}}</span>
+                                </div>
+                            </th>
+                            <td>
+                                <img [src]="pelicula.carteleraFoto" alt="{{ pelicula.nombre }}" width="100"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+			    </div>
+            </div>
+            </div>
+        </div>
+        </div>
+</html>

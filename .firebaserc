@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sim-parcial-labiv-parte1": {
+      "hosting": {
+        "preParcial": [
+          "sim-parcial-labiv-parte1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sim-parcial-labiv-parte1"
+  }
+}

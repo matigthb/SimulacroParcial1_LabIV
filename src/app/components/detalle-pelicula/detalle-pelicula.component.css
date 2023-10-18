@@ -1,0 +1,6 @@
+.card {
+    background-color: #8591d8;
+    border-radius: 15px; /* Mantén el redondeo de las esquinas */
+    overflow:auto; /* Recorta contenido que se desborda */
+    width: 600px;
+  }
